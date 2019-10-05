@@ -1,0 +1,82 @@
+
+@for $i from 1 through 100{
+    .percentage-#{$i}{
+        width: $i * 1%;
+    } 
+}
+
+
+.graph{
+    height: 30px;
+}
+ 
+.arancione{
+    background-color: #fa9600;
+}
+
+.verde{
+    background-color: #7dbc00;
+}
+
+.rosso{
+    background-color: #f51500;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.font-size-smaller{
+    font-size: smaller;
+}
+
+.font-size-medium{
+    font-size: medium;
+}
+
+.font-weight-600{
+    font-weight: 600;
+}
+
+.graph-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.graph-tooltip .tooltip-text {
+    font-size: 12px;
+    display: none;
+    width: 230px;
+    background-color: #212427;
+    color: #fff;
+    text-align: left;
+    padding: 6px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -90px;
+    margin-left: -112px;
+    left: 50%;
+  }
+  .graph-tooltip .tooltip-text::after {
+    content: "";
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: #212427 transparent transparent transparent;
+    margin-left: 101px;
+    top: 82px;
+    position: absolute;
+  }
+
+.graph-tooltip:hover .tooltip-text {
+    display: inline;
+  }
+
+
+.margin-top{
+    margin-top: 100px;
+}

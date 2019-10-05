@@ -1,0 +1,60 @@
+<!-- <dl>
+    <dt>
+      Browser market share June 2015 
+    </dt>
+    <dd class="percentage percentage-11"><span class="text">IE 11: 11.33%</span></dd>
+    <dd class="percentage percentage-49"><span class="text">Chrome: 49.77%</span></dd>
+    <dd class="percentage percentage-16"><span class="text">Firefox: 16.09%</span></dd>
+    
+  </dl> -->
+
+
+<div class="row margin-top">   
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="align-self-end col-sm-1 d-flex font-weight-600 font-size-smaller">
+                EWS
+            </div>
+            <div class="col-sm-11">
+                <div class="d-flex flex-row align-items-center align-self-center flex-nowrap">
+                    <div class="flex-fill graph graph-tooltip percentage-{{graphValue.value}} " 
+                        *ngFor="let graphValue of graphValues" 
+                        [ngClass]="{'verde':graphValue.content=='Verde',
+                                    'arancione':graphValue.content=='Arancione',
+                                    'rosso':graphValue.content=='Rosso'}"
+                        >
+                        <div class="tooltip-text">
+                            <div>{{graphValue.content}}</div>
+                            <div>{{graphValue.date}}</div>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">   
+            <div class="col-sm-1 font-weight-600 font-size-smaller">
+                Periodo
+            </div>
+            <div class="col-sm-11">
+                <div class="d-flex flex-row align-items-center align-self-center">
+                    <div 
+                        class="flex-fill font-size-medium" 
+                        *ngFor="let month of months; let i = index">
+                        {{month}}
+                        <div *ngIf="month=='jan' || i==0">2018</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div *ngFor="let legendContent of legend" class="font-weight-bold font-size-smaller">
+           <span class="dot"
+           [ngClass]="{'verde':legendContent=='Verde',
+                        'arancione':legendContent=='Arancione',
+                        'rosso':legendContent=='Rosso'}"></span> {{legendContent}}
+        </div>
+    </div>
+    
+</div>
